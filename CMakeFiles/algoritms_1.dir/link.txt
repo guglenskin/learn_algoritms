@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/algoritms_1.dir/algoritms_1.c.o -o bin/algoritms_1  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.83.0 -lm /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0 

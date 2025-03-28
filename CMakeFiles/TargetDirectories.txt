@@ -1,0 +1,8 @@
+/home/gug/test/CMakeFiles/c.dir
+/home/gug/test/CMakeFiles/qt.dir
+/home/gug/test/CMakeFiles/main.dir
+/home/gug/test/CMakeFiles/test_c.dir
+/home/gug/test/CMakeFiles/algoritms_1.dir
+/home/gug/test/CMakeFiles/algoritms_2.dir
+/home/gug/test/CMakeFiles/edit_cache.dir
+/home/gug/test/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/alg.dir/algoritms_1.c.o -o bin/alg 

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/algoritms_2.dir/algoritms_2.cpp.o -o bin/algoritms_2 
