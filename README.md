@@ -4,6 +4,9 @@
   <img src="https://img.shields.io/badge/Алгоритмы-2%20проекта-blue" alt="Количество алгоритмов">
   <img src="https://img.shields.io/badge/Языки-C%2FC%2B%2B-green" alt="Используемые языки">
   <img src="https://img.shields.io/badge/Сборка-GCC%20%7C%20Clang%20%7C%20CMake-orange" alt="Варианты сборки">
+  <a href="https://t.me/Golden_Vodka">
+    <img src="https://img.shields.io/badge/💬_Golden_Vodka-2CA5E0?style=flat&logo=telegram" alt="Telegram">
+  </a>
 </div>
 
 ## 📌 Содержание

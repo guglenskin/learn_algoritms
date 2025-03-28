@@ -13,10 +13,8 @@
 *.swo
 
 # Игнорируем специфичные файлы, которые не нужно коммитить
-main.cpp
-cmake_install.cmake
-CMakeLists.txt
-Makefile
+# main.cpp
+
 
 # Игнорируем бинарные файлы и результаты компиляции
 a.out
@@ -24,9 +22,7 @@ a.out
 
 # Игнорируем каталоги сборки (если есть)
 build/
-dist/
-bin/
-CMakeFiles/
+
 
 # Игнорируем системные файлы (например, macOS)
 .DS_Store
