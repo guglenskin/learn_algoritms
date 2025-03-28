@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/my_program.dir/main.cpp.o -o bin/my_program  -lBoost::system -lBoost::filesystem 
