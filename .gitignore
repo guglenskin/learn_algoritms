@@ -16,6 +16,8 @@
 # main.cpp
 CMakeLists.txt
 .gitignore
+.vscode
+venv/
 
 # Игнорируем бинарные файлы и результаты компиляции
 a.out
