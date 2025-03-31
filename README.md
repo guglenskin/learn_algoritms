@@ -1,7 +1,7 @@
 # 📋 README: Инструкция по использованию алгоритмов
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Алгоритмы-4%40проекта-blue" alt="Количество алгоритмов">
+  <img src="https://img.shields.io/badge/Алгоритмы-4%20проекта-blue" alt="Количество алгоритмов">
   <img src="https://img.shields.io/badge/Языки-C%2FC%2B%2B-green" alt="Используемые языки">
   <img src="https://img.shields.io/badge/Сборка-GCC%20%7C%20Clang%20%7C%20CMake-orange" alt="Варианты сборки">
   <a href="https://t.me/Golden_Vodka">
