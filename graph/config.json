@@ -1,7 +1,0 @@
-{
-    "vertices": 10,
-    "edges": 15,
-    "directed": false,
-    "min_weight": 0.5,
-    "max_weight": 5.0
-}

@@ -28,3 +28,10 @@ void test() {
     // Граничный случай
     assert(OddIncrement(0) == 1);  // Хотя 0 не натуральное
 }
+
+#include <iostream>
+
+int main() {
+
+    return 0;
+}

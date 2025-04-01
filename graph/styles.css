@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://imgaz.staticbg.com/customers_avatars/2021/03/16/776/20210316003135_816.jpg'); /* Подставьте ссылку на вашу картинку */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон для контента */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#graph {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: white;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
