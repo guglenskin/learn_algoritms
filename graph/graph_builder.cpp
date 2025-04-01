@@ -11,19 +11,25 @@ struct Edge {
     int weight;
 };
 
-int main() {
-    std::string output_dir = "../output/";
+int main(int argc, char* argv[]) {
+    // Проверяем, был ли передан путь к директории
+    if (argc < 2) {
+        cout << "Ошибка: Не указан путь для сохранения файлов." << endl;
+        return 1;
+    }
+
+    string output_dir = argv[1];  // Путь к директории, переданный через аргумент командной строки
     int numVertices, numEdges;
+
     cout << "Введите количество вершин: ";
     cin >> numVertices;
-    
+
     cout << "Введите количество рёбер: ";
     cin >> numEdges;
 
     vector<Edge> edges;
-    
-    cout << "Введите рёбра в формате: FROM TO WEIGHT (например: A B 2)\n";
 
+    cout << "Введите рёбра в формате: FROM TO WEIGHT (например: A B 2)\n";
     for (int i = 0; i < numEdges; i++) {
         char from, to;
         int weight;
@@ -32,12 +38,19 @@ int main() {
     }
 
     // Сохранение в файл в output
-    std::ofstream file(output_dir + "graph.dat");
+    string filename = output_dir + "/graph.dat";  // Путь к файлу с графом
+    ofstream file(filename);
+
+    if (!file.is_open()) {
+        cout << "Ошибка при открытии файла для записи." << endl;
+        return 1;
+    }
+
     for (const auto& edge : edges) {
         file << edge.from << " " << edge.to << " " << edge.weight << "\n";
     }
     file.close();
 
-    std::cout << "Граф сохранён в " << output_dir + "graph.dat" << "!\n";
+    cout << "Граф сохранён в " << filename << "!" << endl;
     return 0;
 }

@@ -4,12 +4,12 @@ cmake_minimum_required(VERSION 3.10)
 project(GraphProject)
 
 # Указываем стандарт C++
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Добавляем исходники в проект
+# Добавляем подкаталоги
 add_subdirectory(src)  # Подключаем исходники C++
-add_subdirectory(graph)  # Подключаем graph_builder.cpp
+add_subdirectory(graph)  # Подключаем сборку graph_builder.cpp
 
 # Устанавливаем путь для исполнимых файлов
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)

@@ -1,9 +1,12 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import os
+
+filename = "/home/gug/learn_algoritms/output/graph.dat"
 
 def visualize_graph(edges, graph_type, output_file):
     G = nx.DiGraph() if graph_type in [2, 3] else nx.Graph()
-    
+
     if graph_type == 1:  # Полный граф
         nodes = list(set(sum(([u, v] for u, v, _ in edges), [])))
         G.add_nodes_from(nodes)
@@ -21,30 +24,44 @@ def visualize_graph(edges, graph_type, output_file):
         for edge in edges:
             G.add_edge(edge[0], edge[1], weight=edge[2])
         pos = nx.spring_layout(G)
-    
+
     plt.figure(figsize=(8, 8))
     nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=3000, font_size=12, arrows=True)
-    
+
     edge_labels = {(u, v): w for u, v, w in edges}
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
-    
+
     plt.savefig(output_file)
     plt.close()
 
 def read_graph_from_file(filename):
+    if not os.path.exists(filename):  # Проверка существования файла
+        print(f"Ошибка: Файл {filename} не найден.")
+        return []
+
     edges = []
     with open(filename, "r") as file:
         for line in file:
             parts = line.strip().split()
             if len(parts) == 3:
-                edges.append((parts[0], parts[1], int(parts[2])))
+                try:
+                    edges.append((parts[0], parts[1], int(parts[2])))  # Преобразуем вес в целое число
+                except ValueError:
+                    print(f"Ошибка: Неверный формат данных в строке: {line}")
+                    continue
     return edges
 
 def main():
-    filename = "graph.dat"
+    # Путь к файлу и выходной файл для графика
     output_file = "graph.png"
+    
+    # Чтение рёбер из файла
     edges = read_graph_from_file(filename)
     
+    if not edges:  # Если рёбер нет
+        print("Ошибка: Нет рёбер для визуализации.")
+        return
+
     print("Выберите тип графа:")
     print("1 - Полный граф")
     print("2 - Дерево")
@@ -60,6 +77,7 @@ def main():
         except ValueError:
             print("Ошибка: Введите целое число.")
     
+    # Визуализация графа
     visualize_graph(edges, graph_type, output_file)
     print(f"Граф сохранен в {output_file}")
 
